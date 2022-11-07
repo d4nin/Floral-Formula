@@ -1,14 +1,13 @@
 #include <iostream>
 #include <windows.h>
-
 void cvijetnaFormula(std::string cvijet)
 {
+	std::cout<<'\n';
 	if (cvijet == "Ostrolist" || cvijet == "ostrolist") {
 		SetConsoleCP(437);
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 		
 
-		std::cout<<'\n';
 		SetConsoleTextAttribute(h, 10);
 		std::cout << "Grada cvijeta ostrolista:\n\n";
 		std::cout << "                        :\n";
