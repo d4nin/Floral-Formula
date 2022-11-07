@@ -15,6 +15,7 @@ int main()
     std::cout << "2.English (Currently unavailable)\n";
     input:std::cin >> selection;
     if (selection == "Bosnian" || selection == "bosnian" || selection == "Bosanski" || selection == "bosanski") {
+        std::cout<<'\n';
         Bosnian();
     }
     else if (selection == "English" || selection == "english") {
