@@ -2,7 +2,7 @@
 #include <windows.h>
 void cvijetnaFormula(std::string cvijet)
 {
-	std::cout<<'\n';
+	input:std::cout<<'\n';
 	if (cvijet == "Ostrolist" || cvijet == "ostrolist") {
 		SetConsoleCP(437);
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -29,5 +29,10 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "_ (crta gore) = plodnica podrasla\n";
 		std::cout << ": = plodnica se raspada na onoliko dijelova koliko je tackica";
 		SetConsoleTextAttribute(h, 7);
+	}
+
+	else {
+		std::cout<<"Ta formula ne postoji. Pokusaj te ponovo:\n";
+		goto input;
 	}
 }
