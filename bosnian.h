@@ -38,8 +38,14 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "Grada cvijeta Rosaceae (ruze): \n\n";
 		std::cout << "* K5C5A";
 		std::cout << (char)236;
-		std::cout << "G-1-\n";
+		std::cout << "G-1-\n\n";
 		SetConsoleTextAttribute(h, 4);
+		std::cout << "* = cvijet simetrican\n";
+		std::cout << "K = casicni listovi\n";
+		std::cout << "C = krunicni listici\n";
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		SetConsoleTextAttribute(h, 7);
 	}
 	else {
 		std::cout<<"Ta formula ne postoji. Pokusaj te ponovo:\n";
