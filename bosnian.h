@@ -32,12 +32,13 @@ void cvijetnaFormula(std::string cvijet)
 	}
 	else if(cvijet == "Rosaceae" || cvijet == "rosaceae" || cvijet == "Ruze" || cvijet == "ruze" || cvijet == "Ruza" || cvijet == "ruza")  {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
-
+		SetConsoleCP(437);
 
 		SetConsoleTextAttribute(h, 10);
 		std::cout << "Grada cvijeta Rosaceae (ruze): \n\n";
-		std::cout << "* H5 L5 T * P *\n";
-		std::cout << "* H5 L5 T * P 1\n\n";
+		std::cout << "* K5C5A";
+		std::cout << (char)236;
+		std::cout << "G-1-\n";
 		SetConsoleTextAttribute(h, 4);
 	}
 	else {
