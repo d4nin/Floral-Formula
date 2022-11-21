@@ -36,14 +36,31 @@ void cvijetnaFormula(std::string cvijet)
 
 		SetConsoleTextAttribute(h, 10);
 		std::cout << "Grada cvijeta Rosaceae (ruze): \n\n";
-		std::cout << "* K5C5A";
+		std::cout << "* K5 C5 A";
 		std::cout << (char)236;
-		std::cout << "G-1-\n\n";
+		std::cout << " G-1-\n\n";
 		SetConsoleTextAttribute(h, 4);
 		std::cout << "* = cvijet simetrican\n";
 		std::cout << "K = casicni listovi\n";
 		std::cout << "C = krunicni listici\n";
 		std::cout << "A = prasnici\n";
+		std::cout << (char)236;
+		std::cout << " = veliki broj clanova u zavojnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		SetConsoleTextAttribute(h, 7);
+	}
+	else if(cvijet == "Brassicaceae" || cvijet == "brassicaceae" || cvijet == "Krstasice" || cvijet == "krstasice") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleCP(437);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada cvijeta Brassicaceae (krstasica): \n\n";
+		std::cout << "* K2+2 C4 A2+4 G(2)\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "* = cvijet simetrican\n";
+		std::cout << "K2+2 = broj ciklusa i clanova u ciklusu\n";
+		std::cout << "C = krunicni listici\n";
+		std::cout << "A2+4 = broj ciklusa i članova u ciklusu\n";
 		std::cout << "G = plodnica obrasla\n";
 		SetConsoleTextAttribute(h, 7);
 	}

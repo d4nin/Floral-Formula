@@ -22,7 +22,7 @@ int main()
         English();
     }
     else {
-        std::cout << "Unknown input. Please write out the name.\n";
+        std::cout << "Unknown input. Please write out the name correctly.\n";
         goto input;
     }
 }
