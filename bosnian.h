@@ -35,7 +35,7 @@ void cvijetnaFormula(std::string cvijet)
 		SetConsoleCP(437);
 
 		SetConsoleTextAttribute(h, 10);
-		std::cout << "Grada cvijeta Rosaceae (ruze): \n\n";
+		std::cout << "Grada porodice Rosaceae (ruze): \n\n";
 		std::cout << "* K5 C5 A";
 		std::cout << (char)236;
 		std::cout << " G-1-\n\n";
@@ -49,12 +49,29 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "G = plodnica obrasla\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if(cvijet == "Maloideae" || cvijet == "maloideae" || cvijet == "Jabuke" || cvijet == "jabuke") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleCP(437);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada potporodice Maloideae (jabuke): \n\n";
+		std::cout << "* K5 C5 A";
+		std::cout << (char)236;
+		std::cout << " G(5)\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "K = casicni listovi\n";
+		std::cout << "C = krunicni listici\n";
+		std::cout << "A - prasnici\n";
+		std::cout << "G - tuckovi\n";
+		std::cout << "() = elementi srasli\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else if(cvijet == "Brassicaceae" || cvijet == "brassicaceae" || cvijet == "Krstasice" || cvijet == "krstasice") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleCP(437);
 
 		SetConsoleTextAttribute(h, 10);
-		std::cout << "Grada cvijeta Brassicaceae (krstasica): \n\n";
+		std::cout << "Grada porodice Brassicaceae (krstasica): \n\n";
 		std::cout << "* K2+2 C4 A2+4 G(2)\n\n";
 		SetConsoleTextAttribute(h, 4);
 		std::cout << "* = cvijet simetrican\n";
@@ -70,7 +87,7 @@ void cvijetnaFormula(std::string cvijet)
 		SetConsoleCP(437);
 
 		SetConsoleTextAttribute(h, 10);
-		std::cout << "Grada cvijeta Fabaceae (leptirnjaca): \n\n";
+		std::cout << "Grada porodice Fabaceae (leptirnjaca): \n\n";
 		std::cout << (char)24;
 		std::cout << " K(5) C5 A(10) G1\n";
 		std::cout << "                 -\n\n";
@@ -90,7 +107,7 @@ void cvijetnaFormula(std::string cvijet)
 		SetConsoleCP(437); 
 
 		SetConsoleTextAttribute(h, 10);
-		std::cout << "Grada cvijeta Asteracaea (glavocike): \n\n";
+		std::cout << "Grada porodice Asteracaea (glavocike): \n\n";
 		std::cout << "* K(5) [C(5) A5] G(2)\n\n";
 		SetConsoleTextAttribute(h, 4);
 		std::cout << "* = cvijet simetrican\n";
