@@ -64,6 +64,25 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "G = plodnica obrasla\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if(cvijet == "Fabaceae" || cvijet == "fabaceae" || cvijet == "Leptirnjace" || cvijet == "leptirnjace") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleCP(437);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada cvijeta Fabaceae (leptirnjaca): \n\n";
+		std::cout << (char)24;
+		std::cout << " K(5) C5 A(10) G1\n";
+		std::cout << "                -\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << (char)24;
+		std::cout << " = zigomorfna simetrija\n";
+		std::cout << "K = casicni listovi\n";
+		std::cout << "C = krunicni listvoi\n";
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		std::cout << "_ (crta dole) = plodnica nadrasla\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else {
 		std::cout<<"Ta formula ne postoji. Pokusaj te ponovo:\n";
 		goto input;
