@@ -61,6 +61,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "K2+2 = broj ciklusa i clanova u ciklusu\n";
 		std::cout << "C = krunicni listici\n";
 		std::cout << "A2+4 = broj ciklusa i članova u ciklusu\n";
+		std::cout << "() = elementi srasli\n";
 		std::cout << "G = plodnica obrasla\n";
 		SetConsoleTextAttribute(h, 7);
 	}
@@ -72,7 +73,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "Grada cvijeta Fabaceae (leptirnjaca): \n\n";
 		std::cout << (char)24;
 		std::cout << " K(5) C5 A(10) G1\n";
-		std::cout << "                -\n";
+		std::cout << "                 -\n\n";
 		SetConsoleTextAttribute(h, 4);
 		std::cout << (char)24;
 		std::cout << " = zigomorfna simetrija\n";
@@ -80,11 +81,28 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "C = krunicni listvoi\n";
 		std::cout << "A = prasnici\n";
 		std::cout << "G = plodnica obrasla\n";
+		std::cout << "[] i () = elementi srasli\n";
 		std::cout << "_ (crta dole) = plodnica nadrasla\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if(cvijet == "Asteraceae" || cvijet == "asteraceae" || cvijet == "Glavocike" || cvijet == "glavocike") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleCP(437); 
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada cvijeta Asteracaea (glavocike): \n\n";
+		std::cout << "* K(5) [C(5) A5] G(2)\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "* = cvijet simetrican\n";
+		std::cout << "K = casicni listovi\n";
+		std::cout << "C = krunicni listvoi\n";
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		std::cout << "[] i () = elementi srasli\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else {
-		std::cout<<"Ta formula ne postoji. Pokusaj te ponovo:\n";
+		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo:\n";
 		goto input;
 	}
 }
