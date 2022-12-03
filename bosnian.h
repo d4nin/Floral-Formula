@@ -196,8 +196,22 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "[] i () = elementi srasli\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if(cvijet == "Liliaceae" || cvijet == "liliaceae" || cvijet == "Ljiljani" || cvijet == "ljiljani") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada porodice Liliaceae (ljiljana): \n\n";
+		std::cout << "* P3+3 A3+3 G(3)\n";
+		std::cout << "            ----\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "* = cvijet simetrican\n";
+		std::cout << "P3+3 = broj ciklusa i clanova u ciklusu\n";
+		std::cout << "A3+3 = broj ciklusa i clanova u ciklusu\n";
+		std::cout << "G = plodnica obrasla\n";
+		std::cout << "() = elementi srasli\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo:\n";
 	}
-	
+
 }
