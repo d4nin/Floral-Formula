@@ -166,6 +166,21 @@ void cvijetnaFormula(std::string cvijet)
 		SetConsoleTextAttribute(h, 7);
 
 	}
+	else if(cvijet == "Solanaceae" || cvijet == "solanaceae" || cvijet == "Pomocnice" || cvijet == "pomocnice") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada porodice Solanaceae (pomocnice): \n\n";
+		std::cout << "* K(5) (C(5) A5) G(2)\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "* = cvijet simetrican\n";
+		std::cout << "K = casicni listovi\n";
+		std::cout << "C = krunicni listvoi\n";
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		std::cout << "() = elementi srasli\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else if(cvijet == "Asteraceae" || cvijet == "asteraceae" || cvijet == "Glavocike" || cvijet == "glavocike") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
