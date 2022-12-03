@@ -210,6 +210,26 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "() = elementi srasli\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if(cvijet == "Poaceae" || cvijet == "poaceae" || cvijet == "Trave" || cvijet == "trave") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleCP(437);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada porodice Poaceae (trave): \n\n";
+		std::cout << "             ---\n";
+		std::cout << "* ";
+		std::cout << (char)24;
+		std::cout << " P1+2 A3 G(2) \n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "* = cvijet simetrican\n";
+		std::cout << (char)24;
+		std::cout << " = zigomorfna simetrija\n";
+		std::cout << "P1+2 = broj ciklusa i clanova u ciklusu\n";
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		std::cout << "() = elementi srasli\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo:\n";
 	}
