@@ -142,7 +142,29 @@ void cvijetnaFormula(std::string cvijet)
 	}
 	else if(cvijet == "Lamiaceae" || cvijet == "lamiaceae" || cvijet == "Usnatice" || cvijet == "usnatice") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
-		
+		SetConsoleCP(437);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada porodice Lamiaceae (usnatice): \n\n";
+		std::cout << "Lamnium: \n";
+		std::cout << (char)24;
+		std::cout << " K(5) [C(5) A4] G(2)\n";
+		std::cout << "                   -\n\n";
+		std::cout << "Salvia:\n";
+		std::cout << (char)24;
+		std::cout << " K(5) [C(5) A2] G(2)\n";
+		std::cout << "                   -\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << (char)24;
+		std::cout << " = zigomorfna simetrija\n";
+		std::cout << "K = casicni listovi\n";
+		std::cout << "C = krunicni listvoi\n";
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		std::cout << "[] i () = elementi srasli\n";
+		std::cout << "_ (crta dole) = plodnica nadrasla\n";
+		SetConsoleTextAttribute(h, 7);
+
 	}
 	else if(cvijet == "Asteraceae" || cvijet == "asteraceae" || cvijet == "Glavocike" || cvijet == "glavocike") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
