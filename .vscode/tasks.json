@@ -12,6 +12,7 @@
                 "${workspaceFolder}\\Floral Formula\\*.h",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${workspaceFolder}\\Home\\build\\${fileBasenameNoExtension}.exe",
                 "-lbgi",
                 "-lgdi32",
                 "-lcomdlg32",
