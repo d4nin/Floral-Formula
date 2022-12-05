@@ -11,7 +11,3 @@ void Bosnian() {
 	std::cin >> input;
 	cvijetnaFormula(input);
 }
-
-void English() {
-	std::cout << "Welcome! But unfortunately, this option is not available.";
-}
