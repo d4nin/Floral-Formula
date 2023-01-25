@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <windows.h>
 void cvijetnaFormula(std::string cvijet)
 {
@@ -234,4 +235,13 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo:\n";
 	}
 
+}
+void grupaSupnice(std::string cvijet) {
+	std::ofstream supnica("Grupa_Supnice.txt", std::ios::out | std::ios::app);
+	if(!supnica) {
+		std::cout << "Ulaz u datoteku nije uspjelo!\n";
+		std::cout << "Molimo vas provjerite da li ste slucajno izbrisali fajl ili ste ga pomjerili u drugi folder.\n";
+		std::cout << "Zove se 'Grupa_Supnice.txt' i treba biti u istom folderu gdje je ostatak koda.\n";
+		std::cout << "Ako jos se ova poruka pojavljuje, kontaktiraj te vlasnika na Github-u @Boofny.\n";
+	}
 }
