@@ -5,7 +5,7 @@
 //Currently only in Bosnian.
 /*
     Author: Danin Sadžak
-            @Neoxelly
+            @Boofny
 */
 int main()
 {
