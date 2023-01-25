@@ -238,10 +238,22 @@ void cvijetnaFormula(std::string cvijet)
 }
 void grupaSupnice(std::string cvijet) {
 	std::ofstream supnica("Grupa_Supnice.txt", std::ios::out | std::ios::app);
-	if(!supnica) {
+	if (!supnica) {
 		std::cout << "Ulaz u datoteku nije uspjelo!\n";
 		std::cout << "Molimo vas provjerite da li ste slucajno izbrisali fajl ili ste ga pomjerili u drugi folder.\n";
 		std::cout << "Zove se 'Grupa_Supnice.txt' i treba biti u istom folderu gdje je ostatak koda.\n";
 		std::cout << "Ako jos se ova poruka pojavljuje, kontaktiraj te vlasnika na Github-u @Boofny.\n";
-	}
+	} else {
+		std::string jednosupnica = "Jednosupnice";
+		std::string dvosupnica = "Dvosupnice";
+		if (cvijet == "Rosaceae" || cvijet == "rosaceae" || cvijet == "Ruze" || cvijet == "ruze") supnica << "ROSACEAE (RUZE) -> " << dvosupnica << '\n';
+		else if (cvijet == "Maloideae" || cvijet == "maloideae" || cvijet == "Jabuke" || cvijet == "jabuke") supnica << "MALOIDEAE (JABUKE) -> " << dvosupnica << '\n';
+		else if (cvijet == "Prunoideae" || cvijet == "prunoideae" || cvijet == "Sljive" || cvijet == "sljive") supnica << "PRUNOIDEAE (SLJIVE) -> " << dvosupnica << '\n';
+		else if (cvijet == "Brassicaceae" || cvijet == "brassicaceae" || cvijet == "Krstasice" || cvijet == "krstasice") supnica << "BRASSICACEAE (KRSTASICE) -> " << dvosupnica << '\n';
+		else if (cvijet == "Scrophyloriaceae" || cvijet == "scrophyloriaceae" || cvijet == "Zijevalice" || cvijet == "zijevalice") supnica << "SCROPHYLORIACEAE -> " << dvosupnica << '\n';
+		else if (cvijet == "Fabaceae" || cvijet == "fabaceae" || cvijet == "Leptirnjace" || cvijet == "leptirnjace") supnica << "FABACEAE (LEPTIRNJACE) -> " << dvosupnica << '\n';
+		else if (cvijet == "Lamiaceae" || cvijet == "lamiaceae" || cvijet == "Usnatice" || cvijet == "usnatice") supnica << "LAMIACEAE (USNATICE) -> " << dvosupnica << '\n';
+		else if (cvijet == "Solanaceae" || cvijet == "solanaceae" || cvijet == "Pomocnice" || cvijet == "pomocnice") supnica << "SOLANACEAE (POMOCNICE) -> " << dvosupnica << '\n';
+		else if (cvijet == "Asteraceae" || cvijet == "asteraceae" || cvijet == "Glavocike" || cvijet == "glavocike") supnica << "ASTERACEAE (GLAVOLICKE) -> " << dvosupnica << '\n';
+ 	}
 }
