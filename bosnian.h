@@ -255,5 +255,7 @@ void grupaSupnice(std::string cvijet) {
 		else if (cvijet == "Lamiaceae" || cvijet == "lamiaceae" || cvijet == "Usnatice" || cvijet == "usnatice") supnica << "LAMIACEAE (USNATICE) -> " << dvosupnica << '\n';
 		else if (cvijet == "Solanaceae" || cvijet == "solanaceae" || cvijet == "Pomocnice" || cvijet == "pomocnice") supnica << "SOLANACEAE (POMOCNICE) -> " << dvosupnica << '\n';
 		else if (cvijet == "Asteraceae" || cvijet == "asteraceae" || cvijet == "Glavocike" || cvijet == "glavocike") supnica << "ASTERACEAE (GLAVOLICKE) -> " << dvosupnica << '\n';
+		else if (cvijet == "Liliaceae" || cvijet == "liliaceae" || cvijet == "Ljiljani" || cvijet == "ljiljani") supnica << "LILIACEAE (LJILJANI) -> " << jednosupnica << '\n';
+		else if (cvijet == "Poaceae" || cvijet == "poaceae" || cvijet == "Trave" || cvijet == "trave") supnica << "POACEAE (TRAVE) -> " << jednosupnica << '\n';
  	}
 }
