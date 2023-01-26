@@ -11,6 +11,5 @@ int main()
 {
     glavniMeni();
     Bosnian();
-    
+    return 0;
 }
-
