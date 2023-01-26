@@ -231,7 +231,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "() = elementi srasli\n";
 		SetConsoleTextAttribute(h, 7);
 	}
-	else if (cvijet == "Nymphaeceae" || cvijet == "nymphaeceae" || cvijet == "Lopoci" || cvijet == "lopoci") {
+	else if (cvijet == "Nymphaeaceae" || cvijet == "nymphaeaceae" || cvijet == "Lopoci" || cvijet == "lopoci") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleCP(437);
 
@@ -280,6 +280,7 @@ void grupaSupnice(std::string cvijet) {
 		else if (cvijet == "Asteraceae" || cvijet == "asteraceae" || cvijet == "Glavocike" || cvijet == "glavocike") supnica << "ASTERACEAE (GLAVOLICKE) -> " << dvosupnica << '\n';
 		else if (cvijet == "Liliaceae" || cvijet == "liliaceae" || cvijet == "Ljiljani" || cvijet == "ljiljani") supnica << "LILIACEAE (LJILJANI) -> " << jednosupnica << '\n';
 		else if (cvijet == "Poaceae" || cvijet == "poaceae" || cvijet == "Trave" || cvijet == "trave") supnica << "POACEAE (TRAVE) -> " << jednosupnica << '\n';
+		else if (cvijet == "Nymphaeaceae" || cvijet == "nymphaeceae" || cvijet == "Lopoci" || cvijet == "lopoci") supnica << "NYMPHAEACEAE (LOPOCI) -> " << "Karakteristike " << jednosupnica << " i " << dvosupnica << '\n';
 		else supnica << "PORODICA NE POSTOJI\n";
  	}
 }
