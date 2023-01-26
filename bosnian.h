@@ -254,6 +254,33 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "G = plodnica obrasla\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if (cvijet == "Magnoliaceae" || cvijet == "magnoliaceae" || cvijet == "Magnolije" || cvijet == "magnolije") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleCP(437);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada porodice Magnoliaceae (magnolije): \n\n";
+		std::cout << "*P3+3+3 A";
+		std::cout << (char)236;
+		std::cout << " G";
+		std::cout << (char)236;
+		std::cout << ";\n";
+		std::cout << "*K3 C3 A";
+		std::cout << (char)236;
+		std::cout << " G";
+		std::cout << (char)236;
+		std::cout << '\n' << '\n';
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "* = cvijet simetrican\n";
+		std::cout << "P3+3+3 = broj ciklusa i clanova u ciklusu\n";
+		std::cout << "K = casicni listovi\n";
+		std::cout << "C = krunicni listici\n";
+		std::cout << "A = prasnici\n";
+		std::cout << (char)236;
+		std::cout << " = veliki broj clanova u zavojnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
 	}
