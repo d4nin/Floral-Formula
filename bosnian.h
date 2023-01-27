@@ -386,6 +386,23 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "_ (crta gore) = plodnica podrasla\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if (cvijet == "Salicaceae" || cvijet == "salicaceae" || cvijet == "Vrbe" || cvijet == "vrbe") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada porodice Salicacecae (vrbe):\n";
+		std::cout << "Muski cvijet:\n";
+		std::cout << "A2\n\n";
+		std::cout << "Zenski cvijet:\n";
+		std::cout << "G(2)\n";
+		std::cout << " ---\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		std::cout << "() = elementi srasli\n";
+		std::cout << "_ (crta gore) = plodnica podrasla\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
 	}
