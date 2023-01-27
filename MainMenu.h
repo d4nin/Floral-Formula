@@ -21,6 +21,6 @@ void glavniMeni() {
     SetConsoleTextAttribute(h, 7);
     ostatakTeksta();
     if(getch()) {
-        Beep(500,200);
+        Beep(500,400);
     }
 }
