@@ -303,7 +303,6 @@ void cvijetnaFormula(std::string cvijet)
 	}
 	else if (cvijet == "Caryophyllaceae" || cvijet == "caryophyllaceae" || cvijet == "Karanfili" || cvijet == "karanfili") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
-		SetConsoleCP(437);
 
 		SetConsoleTextAttribute(h, 10);
 		std::cout << "Grada porodice Caryophyllaceae (karanfili): \n\n";
@@ -316,6 +315,29 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "G = plodnica obrasla\n";
 		std::cout << "() = elementi srasli\n";
 		std::cout << "_ (crta dole) = plodnica nadrasla\n";
+		SetConsoleTextAttribute(h, 7);
+	}
+	else if (cvijet == "Cactaceae" || cvijet == "cactaceae" || cvijet == "Kaktusi" || cvijet == "kaktusi") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleCP(437);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada porodice Cactaceae (kaktusi): \n\n";
+		std::cout << "*P";
+		std::cout << (char)236;
+		std::cout << " A";
+		std::cout << (char)236;
+		std::cout << "G(";
+		std::cout << (char)236;
+		std::cout << ")\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "K = casicni listovi\n";
+		std::cout << "C = krunicni listici\n";
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		std::cout << (char)236;
+		std::cout << " = veliki broj clanova u zavojnici\n";
+		std::cout << "() = elementi srasli\n";
 		SetConsoleTextAttribute(h, 7);
 	}
 	else {
