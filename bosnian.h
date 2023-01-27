@@ -403,6 +403,26 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "_ (crta gore) = plodnica podrasla\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if (cvijet == "Spiraeoideae" || cvijet == "spiraeoideae" || cvijet == "Grmlje" || cvijet == "grmlje") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleCP(437);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada potporodice Spiraeoideae (grmlje): \n\n";
+		std::cout << "K5C5A";
+		std::cout << (char)236;
+		std::cout << "G2-5(1-8)\n";
+		std::cout << "       --------\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "K = casicni listovi\n";
+		std::cout << "C = krunicni listici\n";
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		std::cout << (char)236;
+		std::cout << " = veliki broj clanova u zavojnici\n";
+		std::cout << "() = elementi srasli\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
 	}
