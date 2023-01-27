@@ -423,6 +423,27 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "() = elementi srasli\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if (cvijet == "Mimosoideae" || cvijet == "mimosoideae" || cvijet == "Mimozovke" || cvijet == "mimozovke") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleCP(437);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada potporodice Mimosoideae (mimozovke):\n\n";
+		std::cout << "*K4 C4 A4 G1;     (Mimosa)\n";
+		std::cout << "*K(4) C4 A";
+		std::cout << (char)236;
+		std::cout << " G1;   (Accacia)\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "* = radijalna simetrija\n";
+		std::cout << "K = casicni listovi\n";
+		std::cout << "C = krunicni listici\n";
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		std::cout << "() = elementi srasli\n";
+		std::cout << (char)236;
+		std::cout << " = veliki broj clanova u zavojnici\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
 	}
