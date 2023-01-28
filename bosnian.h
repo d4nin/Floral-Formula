@@ -549,6 +549,7 @@ void grupaSupnice(std::string cvijet) {
 		else if (cvijet == "Mimosoideae" || cvijet == "mimosoideae" || cvijet == "Mimozovke" || cvijet == "mimozovke") supnica << "MIMOSOIDEAE (MIMOZOVKE) -> " << dvosupnica << '\n';		
 		else if (cvijet == "Caesalpinioideae" || cvijet == "caesalpinioideae" || cvijet == "Sapanovke" || cvijet == "sapanovke") supnica << "CAESALPINIOIDEAE (SAPANOVKE) -> " << dvosupnica << '\n';
 		else if (cvijet == "Papilionoideae" || cvijet == "papilionoideae") supnica << "PAPILIONOIDEAE -> " << dvosupnica << '\n';
+		else if (cvijet == "Rosoideae" || cvijet == "rosoideae") supnica << "ROSOIDEAE -> " << dvosupnica << '\n';
 		else supnica << "PORODICA NE POSTOJI\n";
  	}
 }
