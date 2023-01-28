@@ -444,6 +444,23 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << " = veliki broj clanova u zavojnici\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if (cvijet == "Caesalpinioideae" || cvijet == "caesalpinioideae" || cvijet == "Sapanovke" || cvijet == "sapanovke") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleCP(437);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada porodice Caesalpinioideae (sapanovke): \n\n";
+		std::cout << (char)24;
+		std::cout << "K5 C5 A5+5 G1   (Cercis, Ceratonia)\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << (char)24;
+		std::cout << " = zigomorfna simetrija\n";
+		std::cout << "K = casicni listovi\n";
+		std::cout << "C = krunicni listici\n";
+		std::cout << "A5+5 = broj ciklusa i clanova u ciklusu\n";
+		std::cout << "G = plodnica obrasla\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
 	}
