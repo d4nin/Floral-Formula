@@ -527,6 +527,21 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "[] = prirastavanje dijelova razlicitih ciklusa\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if (cvijet == "Apiaceae" || cvijet == "apiaceae" || cvijet == "Stitarke" || cvijet == "stitarke") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada porodice Apiaceae (stitarke): \n\n";
+		std::cout << "*K5 C5 A5 G(2)\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "K = casicni listovi\n";
+		std::cout << "C = krunicni listici\n";
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		std::cout << "* = radijalna simetrija\n";
+		std::cout << "() = srastavanje dijelova istog ciklusa\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
 	}
