@@ -511,6 +511,22 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "- = plodnica obrasla\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if (cvijet == "Boraginaceae" || cvijet == "boraginaceae" || cvijet == "Ostrolist" || cvijet == "ostrolist") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada porodice Boraginaceae (ostrolisti): \n\n";
+		std::cout << "*K(5)[C(5) A5]G(2)\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "K = casicni listovi\n";
+		std::cout << "C = krunicni listici\n";
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		std::cout << "* = radijalna simetrija\n";
+		std::cout << "() = srastavanje dijelova istog ciklusa\n";
+		std::cout << "[] = prirastavanje dijelova razlicitih ciklusa\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
 	}
