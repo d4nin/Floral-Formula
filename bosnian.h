@@ -596,6 +596,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << " = veliki broj clanova u zavojnici\n";
 		std::cout << "_ (crta dole) = plodnica nadrasla\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "ALISMATACEAE (ZABOCUNI) -> " << jednosupnica << '\n';
 	}
 	else if (cvijet == "Araceae" || cvijet == "araceae" || cvijet == "Kozlaci" || cvijet == "kozlaci") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -609,6 +610,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "A = prasnici\n";
 		std::cout << "G = plodnica obrasla\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "ARACEAE (KOZLACI) -> " << jednosupnica << '\n';
 	}
 	else if (cvijet == "Lemnaceae" || cvijet == "lemnaceae" || cvijet == "Vodene lece" || cvijet == "vodene lece") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -621,6 +623,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "A = prasnici\n";
 		std::cout << "G = plodnica obrasla\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "LEMNACEAE (VODENE LEECE) -> " << jednosupnica << '\n';
 	}
 	else if (cvijet == "Arecaceae" || cvijet == "aracaceae" || cvijet == "Palmae" || cvijet == "palmae" || cvijet == "Palme" || cvijet == "palme") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -640,6 +643,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "_ (crta dole) = plodnica nadrasla\n";
 		std::cout << "() = srastavanje dijelova istog ciklusa\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "ARECACEAE/PALMAE (PALME) -> " << jednosupnica << '\n';
 	}
 	else if (cvijet == "Juncaceae" || cvijet == "juncaceae" || cvijet == "Sitovi" || cvijet == "sitovi") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -657,6 +661,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "_ (crta dole) = plodnica nadrasla\n";
 		std::cout << "() = srastavanje dijelova istog ciklusa\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "JUNCACEAE (SITOVI) -> " << jednosupnica << '\n';
 	}
 	else if (cvijet == "Cyperaceae" || cvijet == "cyperaceae" || cvijet == "Sasevi" || cvijet == "sasevi") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -674,6 +679,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "_ (crta dole) = plodnica nadrasla\n";
 		std::cout << "() = srastavanje dijelova istog ciklusa\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "CYPERACEAE (SASEVI) -> " << jednosupnica << '\n';
 	}
 	else if (cvijet == "Orchidaceae" || cvijet == "orchidaceae" || cvijet == "Orhideje" || cvijet == "orhideje") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -692,6 +698,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "[] i () = elementi srasli\n";
 		std::cout << "_ (crta gore) = plodnica podrasla\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "ORCHIDACEAE (ORHIDEJE) -> " << jednosupnica << '\n';
 	}
 	else if (cvijet == "Iridaceae" || cvijet == "iridaceae" || cvijet == "Perunike" || cvijet == "perunike") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -708,9 +715,11 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "() = elementi srasli\n";
 		std::cout << "_ (crta gore) = plodnica podrasla\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "IRIDACEAE (PERUNIKE) -> " << jednosupnica << '\n';
 	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
+		supnica << "PORODICA NEPOSTOJI" << '\n';
 	}
 
 }
