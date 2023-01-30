@@ -580,6 +580,9 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "G = plodnica obrasla\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if (cvijet == "Lemnaceae" || cvijet == "lemnaceae" || cvijet == "Vodene lece" || cvijet == "vodene lece") {
+		
+	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
 	}
