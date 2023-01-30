@@ -560,11 +560,18 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "C = krunicni listici\n";
 		std::cout << "A = prasnici\n";
 		std::cout << "G = plodnica obrasla\n";
+		std::cout << "A3+3 = broj ciklusa i clanova u ciklusu\n";
 		std::cout << "* = radijalna simetrija\n";
 		std::cout << (char)236;
 		std::cout << " = veliki broj clanova u zavojnici\n";
 		std::cout << "_ (crta dole) = plodnica nadrasla\n";
 		SetConsoleTextAttribute(h, 7);
+	}
+	else if (cvijet == "Araceae" || cvijet == "araceae" || cvijet == "Kozlaci" || cvijet == "kozlaci") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+		
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada porodice Araceae (kozlaci): \n\n";
 	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
