@@ -572,6 +572,9 @@ void cvijetnaFormula(std::string cvijet)
 		
 		SetConsoleTextAttribute(h, 10);
 		std::cout << "Grada porodice Araceae (kozlaci): \n\n";
+		std::cout << "P0 A3-4;\n";
+		std::cout << "P0 G11\n\n";
+		SetConsoleTextAttribute(h, 7);
 	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
