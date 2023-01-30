@@ -334,6 +334,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "() = elementi srasli\n";
 		std::cout << "_ (crta dole) = plodnica nadrasla\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "CARYOPHYLLACEAE (KARANFILI) -> " << dvosupnica << '\n';
 	}
 	else if (cvijet == "Cactaceae" || cvijet == "cactaceae" || cvijet == "Kaktusi" || cvijet == "kaktusi") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -357,6 +358,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << " = veliki broj clanova u zavojnici\n";
 		std::cout << "() = elementi srasli\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "CACTACEAE (KAKTUSI) -> " << dvosupnica << '\n';
 	}
 	else if (cvijet == "Fagaceae" || cvijet == "fagaceae" || cvijet == "Bukovnjace" || cvijet == "bukovnjace") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -385,6 +387,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "() = elementi srasli\n";
 		std::cout << "_ (crta gore) = plodnica podrasla\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "FAGACEAE (BUKOVNJACE) -> " << dvosupnica << '\n';
 	}
 	else if (cvijet == "Betulaceae" || cvijet == "betulaceae" || cvijet == "Breze" || cvijet == "breze") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -403,6 +406,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "() = elementi srasli\n";
 		std::cout << "_ (crta gore) = plodnica podrasla\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "BETULACEAE (BREZE) -> " << dvosupnica << '\n';
 	}
 	else if (cvijet == "Salicaceae" || cvijet == "salicaceae" || cvijet == "Vrbe" || cvijet == "vrbe") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -420,6 +424,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "() = elementi srasli\n";
 		std::cout << "_ (crta gore) = plodnica podrasla\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "SALICACEAE (VRBE) -> " << dvosupnica << '\n';
 	}
 	else if (cvijet == "Spiraeoideae" || cvijet == "spiraeoideae" || cvijet == "Grmlje" || cvijet == "grmlje") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
