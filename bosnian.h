@@ -3,8 +3,12 @@
 #include <windows.h>
 void cvijetnaFormula(std::string cvijet)
 {
+	std::ofstream supnica("Grupa_Supnice.txt", std::ios::out | std::ios::app);
+	std::string jednosupnica = "Jednosupnice";
+	std::string dvosupnica = "Dvosupnice";
+
 	std::cout<<'\n';
-	if (cvijet == "Ostrolist" || cvijet == "ostrolist") {
+	if (cvijet == "Ostrolist" || cvijet == "ostrolist" || cvijet == "Borago officialis" || cvijet == "borago officialis") {
 		SetConsoleCP(437);
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 		
@@ -30,6 +34,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "_ (crta gore) = plodnica podrasla\n";
 		std::cout << ": = plodnica se raspada na onoliko dijelova koliko je tackica";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "BORAGO OFFICIALIS (OSTROLIST) -> " << dvosupnica << '\n';
 	}
 	else if(cvijet == "Rosaceae" || cvijet == "rosaceae" || cvijet == "Ruze" || cvijet == "ruze" || cvijet == "Ruza" || cvijet == "ruza")  {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -49,6 +54,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << " = veliki broj clanova u zavojnici\n";
 		std::cout << "G = plodnica obrasla\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "ROSACEAE (RUZA) -> " << dvosupnica << '\n';
 	}
 	else if(cvijet == "Maloideae" || cvijet == "maloideae" || cvijet == "Jabuke" || cvijet == "jabuke") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -67,6 +73,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "G = tuckovi\n";
 		std::cout << "() = elementi srasli\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "MALOIDEAE (JABUKE) -> " << dvosupnica << '\n';
 	}
 	else if(cvijet == "Prunoideae" || cvijet == "prunoideae" || cvijet == "Sljive" || cvijet == "sljive") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -85,6 +92,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << " = veliki broj clanova u zavojnici\n";
 		std::cout << "G-1- = plodnica obrasla\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "PRUNOIDEAE (SLJIVE)" << dvosupnica << '\n';
 	} 
 	else if(cvijet == "Brassicaceae" || cvijet == "brassicaceae" || cvijet == "Krstasice" || cvijet == "krstasice") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -683,50 +691,4 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
 	}
 
-}
-void grupaSupnice(std::string cvijet) {
-	std::ofstream supnica("Grupa_Supnice.txt", std::ios::out | std::ios::app);
-	if (!supnica) {
-		std::cout << "Ulaz u datoteku nije uspjelo!\n";
-		std::cout << "Molimo vas provjerite da li ste slucajno izbrisali fajl ili ste ga pomjerili u drugi folder.\n";
-		std::cout << "Zove se 'Grupa_Supnice.txt' i treba biti u istom folderu gdje je ostatak koda.\n";
-		std::cout << "Ako jos se ova poruka pojavljuje, kontaktiraj te vlasnika na Github-u @Boofny.\n";
-	} else {
-		std::string jednosupnica = "Jednosupnice";
-		std::string dvosupnica = "Dvosupnice";
-		if (cvijet == "Rosaceae" || cvijet == "rosaceae" || cvijet == "Ruze" || cvijet == "ruze") supnica << "ROSACEAE (RUZE) -> " << dvosupnica << '\n';
-		else if (cvijet == "Maloideae" || cvijet == "maloideae" || cvijet == "Jabuke" || cvijet == "jabuke") supnica << "MALOIDEAE (JABUKE) -> " << dvosupnica << '\n';
-		else if (cvijet == "Prunoideae" || cvijet == "prunoideae" || cvijet == "Sljive" || cvijet == "sljive") supnica << "PRUNOIDEAE (SLJIVE) -> " << dvosupnica << '\n';
-		else if (cvijet == "Brassicaceae" || cvijet == "brassicaceae" || cvijet == "Krstasice" || cvijet == "krstasice") supnica << "BRASSICACEAE (KRSTASICE) -> " << dvosupnica << '\n';
-		else if (cvijet == "Scrophyloriaceae" || cvijet == "scrophyloriaceae" || cvijet == "Zijevalice" || cvijet == "zijevalice") supnica << "SCROPHYLORIACEAE -> " << dvosupnica << '\n';
-		else if (cvijet == "Fabaceae" || cvijet == "fabaceae" || cvijet == "Leptirnjace" || cvijet == "leptirnjace") supnica << "FABACEAE (LEPTIRNJACE) -> " << dvosupnica << '\n';
-		else if (cvijet == "Lamiaceae" || cvijet == "lamiaceae" || cvijet == "Usnatice" || cvijet == "usnatice") supnica << "LAMIACEAE (USNATICE) -> " << dvosupnica << '\n';
-		else if (cvijet == "Solanaceae" || cvijet == "solanaceae" || cvijet == "Pomocnice" || cvijet == "pomocnice") supnica << "SOLANACEAE (POMOCNICE) -> " << dvosupnica << '\n';
-		else if (cvijet == "Asteraceae" || cvijet == "asteraceae" || cvijet == "Glavocike" || cvijet == "glavocike") supnica << "ASTERACEAE (GLAVOLICKE) -> " << dvosupnica << '\n';
-		else if (cvijet == "Liliaceae" || cvijet == "liliaceae" || cvijet == "Ljiljani" || cvijet == "ljiljani") supnica << "LILIACEAE (LJILJANI) -> " << jednosupnica << '\n';
-		else if (cvijet == "Poaceae" || cvijet == "poaceae" || cvijet == "Trave" || cvijet == "trave") supnica << "POACEAE (TRAVE) -> " << jednosupnica << '\n';
-		else if (cvijet == "Nymphaeaceae" || cvijet == "nymphaeceae" || cvijet == "Lopoci" || cvijet == "lopoci") supnica << "NYMPHAEACEAE (LOPOCI) -> " << "Karakteristike " << jednosupnica << " i " << dvosupnica << '\n';
-		else if (cvijet == "Magnoliaceae" || cvijet == "magnoliaceae" || cvijet == "Magnolije" || cvijet == "magnolije") supnica << "MAGNOLIACEAE (MAGNOLIJE) -> " << "Nisu " << jednosupnica << " niti " << dvosupnica << '\n'; 
-		else if (cvijet == "Ranunculaceae" || cvijet == "ranunculaceae" || cvijet == "Zabnjaci" || cvijet == "zabnjaci") supnica << "RANUNCULACEAE (ZABNJACI) -> " << dvosupnica << '\n'; 
-		else if (cvijet == "Caryophyllaceae" || cvijet == "caryophyllaceae" || cvijet == "Karanfili" || cvijet == "karanfili") supnica << "CARYOPHYLLACEAE (KARANFILI) -> " << dvosupnica << '\n';
-		else if (cvijet == "Cactaceae" || cvijet == "cactaceae" || cvijet == "Kaktusi" || cvijet == "kaktusi") supnica << "CACTACEAE -> " << dvosupnica << '\n';
-		else if (cvijet == "Fagaceae" || cvijet == "fagaceae" || cvijet == "Bukovnjace" || cvijet == "bukovnjace") supnica << "FAGACEAE (BUKOVNJACE) -> " << dvosupnica << '\n';
-		else if (cvijet == "Betulaceae" || cvijet == "betulaceae" || cvijet == "Breze" || cvijet == "breze") supnica << "BETULACEAE (BREZE) -> " << dvosupnica << '\n';
-		else if (cvijet == "Salicaceae" || cvijet == "salicaceae" || cvijet == "Vrbe" || cvijet == "vrbe") supnica << "SALICACEAE (VRBE) -> " << dvosupnica << "\n";
-		else if (cvijet == "Spiraeoideae" || cvijet == "spiraeoideae" || cvijet == "Grmlje" || cvijet == "grmlje") supnica << "SPIRAEOIDEAE (GRMLJE) -> " << dvosupnica << '\n';
-		else if (cvijet == "Mimosoideae" || cvijet == "mimosoideae" || cvijet == "Mimozovke" || cvijet == "mimozovke") supnica << "MIMOSOIDEAE (MIMOZOVKE) -> " << dvosupnica << '\n';		
-		else if (cvijet == "Caesalpinioideae" || cvijet == "caesalpinioideae" || cvijet == "Sapanovke" || cvijet == "sapanovke") supnica << "CAESALPINIOIDEAE (SAPANOVKE) -> " << dvosupnica << '\n';
-		else if (cvijet == "Papilionoideae" || cvijet == "papilionoideae") supnica << "PAPILIONOIDEAE -> " << dvosupnica << '\n';
-		else if (cvijet == "Rosoideae" || cvijet == "rosoideae") supnica << "ROSOIDEAE -> " << dvosupnica << '\n';
-		else if (cvijet == "Boraginaceae" || cvijet == "boraginaceae" || cvijet == "Ostrolist" || cvijet == "ostrolist") supnica << "BORAGINACEAE (OSTROLIST) -> " << dvosupnica << '\n';
-		else if (cvijet == "Apiaceae" || cvijet == "apiaceae" || cvijet == "Stitarke" || cvijet == "stitarke") supnica << "APIACEAE (STITARKE) -> " << dvosupnica << '\n';
-		else if (cvijet == "Alismataceae" || cvijet == "alismataceae" || cvijet == "Zabocuni" || cvijet == "zabocuni") supnica << "ALISMATACEAE (ZABOCUNI) -> " << jednosupnica << '\n';
-		else if (cvijet == "Araceae" || cvijet == "araceae" || cvijet == "Kozlaci" || cvijet == "kozlaci") supnica << "ARACEAE (KOZLACI) -> " << jednosupnica << '\n';
-		else if (cvijet == "Lemnaceae" || cvijet == "lemnaceae" || cvijet == "Vodene lece" || cvijet == "vodene lece") supnica << "LEMNACEAE (VODENE LECE) -> " << jednosupnica << '\n';
-		else if (cvijet == "Arecaceae" || cvijet == "aracaceae" || cvijet == "Palmae" || cvijet == "palmae" || cvijet == "Palme" || cvijet == "palme") supnica << "ARECACEAE/PALMAE (PALME) -> " << jednosupnica << '\n';
-		else if (cvijet == "Juncaceae" || cvijet == "juncaceae" || cvijet == "Sitovi" || cvijet == "sitovi") supnica << "JUNCACEAE (SITOVI) -> " << jednosupnica << '\n';
-		else if (cvijet == "Cyperaceae" || cvijet == "cyperaceae" || cvijet == "Sasevi" || cvijet == "sasevi") supnica << "CYPERACEAE (SASEVI) -> " << jednosupnica << '\n';
-		else if (cvijet == "Orchidaceae" || cvijet == "orchidaceae" || cvijet == "Orhideje" || cvijet == "orhideje") supnica << "ORCHIDACEAE (ORHIDEJE) -> " << jednosupnica << '\n';
-		else supnica << "PORODICA NE POSTOJI\n";
- 	}
 }
