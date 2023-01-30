@@ -622,6 +622,7 @@ void grupaSupnice(std::string cvijet) {
 		else if (cvijet == "Boraginaceae" || cvijet == "boraginaceae" || cvijet == "Ostrolist" || cvijet == "ostrolist") supnica << "BORAGINACEAE (OSTROLIST) -> " << dvosupnica << '\n';
 		else if (cvijet == "Apiaceae" || cvijet == "apiaceae" || cvijet == "Stitarke" || cvijet == "stitarke") supnica << "APIACEAE (STITARKE) -> " << dvosupnica << '\n';
 		else if (cvijet == "Alismataceae" || cvijet == "alismataceae" || cvijet == "Zabocuni" || cvijet == "zabocuni") supnica << "ALISMATACEAE (ZABOCUNI) -> " << jednosupnica << '\n';
+		else if (cvijet == "Araceae" || cvijet == "araceae" || cvijet == "Kozlaci" || cvijet == "kozlaci") supnica << "ARACEAE (KOZLACI) -> " << jednosupnica << '\n';
 		else supnica << "PORODICA NE POSTOJI\n";
  	}
 }
