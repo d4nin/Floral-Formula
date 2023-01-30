@@ -542,6 +542,30 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "() = srastavanje dijelova istog ciklusa\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if (cvijet == "Alismataceae" || cvijet == "alismataceae" || cvijet == "Zabocuni" || cvijet == "zabocuni") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleCP(437);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada porodice Alismataceae (zabocuni): \n\n";
+		std::cout << "*P3+3 A3+3 G";
+		std::cout << (char)236 << '\n';
+		std::cout << "            -\n";
+		std::cout << "ili\n\n";
+		std::cout << "*K3 C3 A3+3 G";
+		std::cout << (char)236 << '\n';
+		std::cout << "             -\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "K = casicni listovi\n";
+		std::cout << "C = krunicni listici\n";
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		std::cout << "* = radijalna simetrija\n";
+		std::cout << (char)236;
+		std::cout << " = veliki broj clanova u zavojnici\n";
+		std::cout << "_ (crta dole) = plodnica nadrasla\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
 	}
