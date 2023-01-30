@@ -628,6 +628,23 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "() = srastavanje dijelova istog ciklusa\n";
 		SetConsoleTextAttribute(h, 7);
 	}
+	else if (cvijet == "Cyperaceae" || cvijet == "cyperaceae" || cvijet == "Sasevi" || cvijet == "sasevi") {
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada porodice Cyperaceae (sasevi): \n\n";
+		std::cout << "A3\n";
+		std::cout << "G(3)\n";
+		std::cout << " ---\n";
+		std::cout << "A3G(3)\n";
+		std::cout << "   ---\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		std::cout << "_ (crta dole) = plodnica nadrasla\n";
+		std::cout << "() = srastavanje dijelova istog ciklusa\n";
+		SetConsoleTextAttribute(h, 7);
+	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
 	}
