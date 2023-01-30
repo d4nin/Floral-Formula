@@ -581,7 +581,16 @@ void cvijetnaFormula(std::string cvijet)
 		SetConsoleTextAttribute(h, 7);
 	}
 	else if (cvijet == "Lemnaceae" || cvijet == "lemnaceae" || cvijet == "Vodene lece" || cvijet == "vodene lece") {
-		
+		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+
+		SetConsoleTextAttribute(h, 10);
+		std::cout << "Grada porodice Lemnaceae (vodene lece): \n\n";
+		std::cout << "A1 - muski cvijet\n";
+		std::cout << "G1 - zenski cvijet\n\n";
+		SetConsoleTextAttribute(h, 4);
+		std::cout << "A = prasnici\n";
+		std::cout << "G = plodnica obrasla\n";
+		SetConsoleTextAttribute(h, 7);
 	}
 	else {
 		std::cout<<"Ta porodica ne postoji. Pokusaj te ponovo.\n";
