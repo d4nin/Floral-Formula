@@ -10,5 +10,4 @@ void Bosnian() {
 	std::cout << "(Upozorenje: C++ ne prihvata Bosanska slova!)\n";
 	getline(std::cin, input);
 	cvijetnaFormula(input);
-	grupaSupnice(input);
 }
