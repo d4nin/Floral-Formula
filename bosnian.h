@@ -268,6 +268,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << " = veliki broj clanova u zavojnici\n";
 		std::cout << "G = plodnica obrasla\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "NYMPHAEACEAE (LOPOCI) -> " << dvosupnica << '\n';
 	}
 	else if (cvijet == "Magnoliaceae" || cvijet == "magnoliaceae" || cvijet == "Magnolije" || cvijet == "magnolije") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -295,6 +296,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << " = veliki broj clanova u zavojnici\n";
 		std::cout << "G = plodnica obrasla\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "MAGNOLIACEAE (MAGNOLIJE) -> " << dvosupnica << '\n';
 	}
 	else if (cvijet == "Ranunculaceae" || cvijet == "ranunculaceae" || cvijet == "Zabnjaci" || cvijet == "zabnjaci") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -315,6 +317,7 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << " = veliki broj clanova u zavojnici\n";
 		std::cout << "G = plodnica obrasla\n";
 		SetConsoleTextAttribute(h, 7);
+		supnica << "RANUNCULACEAE (ZABNJACI) -> " << dvosupnica << '\n';
 	}
 	else if (cvijet == "Caryophyllaceae" || cvijet == "caryophyllaceae" || cvijet == "Karanfili" || cvijet == "karanfili") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
