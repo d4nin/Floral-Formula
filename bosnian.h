@@ -1,6 +1,11 @@
 #include <iostream>
 #include <fstream>
 #include <windows.h>
+#include <string>
+#include <codecvt>
+#include <locale>
+#include <shellapi.h>
+
 void cvijetnaFormula(std::string cvijet)
 {
 	std::ofstream supnica("Grupa_Supnice.txt", std::ios::out | std::ios::app);
@@ -11,7 +16,6 @@ void cvijetnaFormula(std::string cvijet)
 	if (cvijet == "Ostrolist" || cvijet == "ostrolist" || cvijet == "Borago officialis" || cvijet == "borago officialis") {
 		SetConsoleCP(437);
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
-		
 
 		SetConsoleTextAttribute(h, 10);
 		std::cout << "Grada cvijeta ostrolista:\n\n";
@@ -53,8 +57,35 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << (char)236;
 		std::cout << " = veliki broj clanova u zavojnici\n";
 		std::cout << "G = plodnica obrasla\n";
-		SetConsoleTextAttribute(h, 7);
 		supnica << "ROSACEAE (RUZA) -> " << dvosupnica << '\n';
+		std::cout << '\n';
+		SetConsoleTextAttribute(h, 6);
+		int odluka;
+		std::cout << "Izaberite jedne od 3 ponudenih slika!\n";
+		std::cout << "1. Uzivo cvjet\n";
+		std::cout << "2. Plod cvjeta\n";
+		std::cout << "3. Graficki prikaz\n";
+		SetConsoleTextAttribute(h, 7);
+		again:std::cin >> odluka;
+		std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> convert;
+		std::wstring url;
+		switch(odluka) {
+			case 1:
+  				url = convert.from_bytes("https://cdn.discordapp.com/attachments/594198772150698024/1070387261100798023/img0jnf707632139f58f824f66bb612ce06_1__6fea583c1735693ab4d09057699dea5f_z1.jpg");
+  				ShellExecuteW(NULL, L"open", url.c_str(), NULL, NULL, SW_SHOWNORMAL);
+				break;
+			case 2:
+				url = convert.from_bytes("https://cdn.discordapp.com/attachments/594198772150698024/1070387261335666758/Untitled-8-min.png");
+				ShellExecuteW(NULL, L"open", url.c_str(), NULL, NULL, SW_SHOWNORMAL);
+				break;
+			case 3:
+				url = convert.from_bytes("https://cdn.discordapp.com/attachments/594198772150698024/1070387261520232548/dddd.PNG");
+				ShellExecuteW(NULL, L"open", url.c_str(), NULL, NULL, SW_SHOWNORMAL);
+				break;
+			default:
+				std::cout << "Molimo vas da izabere brojeve izmedju 1-3!\n";
+				goto again;
+		}
 	}
 	else if(cvijet == "Maloideae" || cvijet == "maloideae" || cvijet == "Jabuke" || cvijet == "jabuke") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
