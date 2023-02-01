@@ -459,8 +459,35 @@ void cvijetnaFormula(std::string cvijet)
 		std::cout << "A3+3 = broj ciklusa i clanova u ciklusu\n";
 		std::cout << "G = plodnica obrasla\n";
 		std::cout << "() = elementi srasli\n";
-		SetConsoleTextAttribute(h, 7);
 		supnica << "LILIACEAE (LJILJANI) -> " << jednosupnica << '\n';
+		std::cout << '\n';
+		SetConsoleTextAttribute(h, 6);
+		int odluka;
+		std::cout << "Izaberite jedne od 3 ponudenih slika!\n";
+		std::cout << "1. Uzivo cvjet\n";
+		std::cout << "2. Plod cvjeta\n";
+		std::cout << "3. Graficki prikaz\n";
+		SetConsoleTextAttribute(h, 7);
+		again9:std::cin >> odluka;
+		std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> convert;
+		std::wstring url;
+		switch(odluka) {
+			case 1:
+  				url = convert.from_bytes("https://cdn.discordapp.com/attachments/594198772150698024/1070420373516066876/Bosanski_ljiljan_-_Ozren_1.JPG");
+  				ShellExecuteW(NULL, L"open", url.c_str(), NULL, NULL, SW_SHOWNORMAL);
+				break;
+			case 2:
+				url = convert.from_bytes("https://cdn.discordapp.com/attachments/594198772150698024/1070420373163737209/ggg.PNG");
+				ShellExecuteW(NULL, L"open", url.c_str(), NULL, NULL, SW_SHOWNORMAL);
+				break;
+			case 3:
+				url = convert.from_bytes("https://cdn.discordapp.com/attachments/594198772150698024/1070420372840783922/Capture.PNG");
+				ShellExecuteW(NULL, L"open", url.c_str(), NULL, NULL, SW_SHOWNORMAL);
+				break;
+			default:
+				std::cout << "Molimo vas da izabere brojeve izmedju 1-3!\n";
+				goto again9;
+		}
 	}
 	else if(cvijet == "Poaceae" || cvijet == "poaceae" || cvijet == "Trave" || cvijet == "trave") {
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
