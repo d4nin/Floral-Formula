@@ -12,7 +12,7 @@ Copy the link of the repository and clone it:
 
 Then open the folder where you cloned it in VSCode. Run it and enjoy!
 
-PS: Don't forget to have "runinterminal" enabled!
+PS: Don't forget to have "runinterminal" enabled in settings!
 
 
 # IMPORTANT!!
