@@ -6,13 +6,9 @@ It shows the actual formula, and the explanation. Then it showcases images for t
 
 # How to launch
 Copy the link of the repository and clone it:
-<button id="demo" onclick="copyToClipboard(document.getElementById('demo').innerHTML)">git clone https://github.com/sadzake/Floral-Formula</button>
 
-<script>
-  function copyToClipboard(text) {
-    window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
-  }
-</script>
+
+<img src="https://cdn.discordapp.com/attachments/594198772150698024/1071077452585115708/Screenshot_204.png" style="height: 500px; width:700px;"/>
 
 Then open the folder where you cloned it in VSCode. Run it and enjoy!
 
